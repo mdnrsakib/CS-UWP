@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="BusInformationApp.Details"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusInformationApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+        <TextBlock Text="Bus Details" 
+                   FontWeight="SemiBold" 
+                   TextAlignment="Center" 
+                   FontFamily="Seque UI" 
+                   FontSize="24" 
+                   Padding="5 5 5 15"
+                   Margin="5 50 5 5"/>
+        <StackPanel Orientation="Horizontal" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top"
+                Margin="50">
+            <Border BorderBrush="Yellow" 
+                                Width="200" Height="200"
+                                BorderThickness="1"
+                                CornerRadius="5"                                   
+                               Padding="2">
+                <Border BorderThickness="1"
+                                    CornerRadius="5"                                   
+                                    Padding="5"
+                
+                           >
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding Image}" />
+                    </Border.Background>
+                </Border>
+            </Border>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10,5">
+                    <TextBlock Text="RegistrationNo: " Margin="0,0,10, 0" Width="120" />
+                    <TextBlock Text="{Binding RegistrationNo}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Name: " Margin="0,0,10,0" Width="120"/>
+                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Route: " Margin="0,0,10, 0" Width="120" />
+                    <TextBlock Text="{Binding Route}"   />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Bus Type: " Margin="0,0,10, 0" Width="120" />
+                    <TextBlock Text="{Binding BusType}"   />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="JourneyDate: " Margin="0,0,10, 0" Width="120" />
+                    <TextBlock Text="{Binding JourneyON}"   />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="DeparturePlace: " Margin="0,0,10, 0" Width="120" />
+                    <TextBlock Text="{Binding DeparturePlace}"   />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10, 5">
+                    <TextBlock Text="Fare Per Person: " Margin="0,0,10, 0" Width="120" />
+                    <TextBlock Text="{Binding Fare}"   />
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="back" Icon="Back" Click="back_Click" Content="Back"  />
+        </CommandBar>
+    </Page.TopAppBar>
+</Page>
